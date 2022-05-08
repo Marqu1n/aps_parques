@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Ubuntu";
+}
+
+body {
+  background: #ecebf3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* ================== */
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  overflow-x: scroll;
+  padding: 12px 32px;
+  background: #19381f;
+  box-shadow: 0 3px 32px rgba(0, 0, 0, 0.6);
+}
+
+nav ul::-webkit-scrollbar {
+  width: 20px;
+}
+
+nav ul::-webkit-scrollbar-track {
+  margin: 8px;
+}
+
+nav ul::-webkit-scrollbar-thumb {
+  background: #ecebf3;
+  border-radius: 10px;
+}
+
+nav ul li {
+  align-self: center;
+  list-style: none;
+}
+
+nav .nav-link {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 1 60px;
+  padding: 12px 16px;
+  margin: 0 16px;
+  background: #ecebf3;
+  border-radius: 8px;
+  min-height: 220px;
+
+  transform: translateY(0px);
+  transition: 0.5s;
+}
+
+nav .nav-link:hover {
+  transform: translateY(-8px);
+}
+
+nav .nav-link img {
+  flex: 1 1;
+  border-radius: 10px;
+  margin: 0;
+  width: 180px;
+  max-height: 122px;
+}
+
+nav .nav-home {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 1 60px;
+  padding: 0 30px;
+  margin: auto 30px;
+  color: #ecebf3;
+  border-radius: 8px;
+  text-align: center;
+
+  transform: translateY(0px);
+  transition: 0.5s;
+}
+
+nav .nav-home img {
+  flex: 1 1;
+  border-radius: 10px;
+  width: 45px;
+}
+
+nav .nav-home:hover {
+  transform: translateY(-8px);
+}
+
+.current-page::active {
+  background-color: #ecebf3;
+  border: 8px #0f2213 solid;
+  margin: 0 16px;
+}
+
+.nav-link .nav-link-paragraph {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+  padding: 8px 5px;
+}
+
+.nav-link .nav-link-paragraph::after {
+  content: "";
+  background: #19381f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: 0;
+  transition: 0.3s;
+}
+
+.nav-link .nav-link-text {
+  text-align: center;
+  font-size: 18px;
+
+  position: relative;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.nav-link:hover .nav-link-paragraph::after {
+  width: 100%;
+}
+
+.nav-link:hover .nav-link-text {
+  color: white;
+}
+
+/* ================== */
+
+main {
+  width: 80%;
+  margin: 81px auto;
+  background-color: #ecebf3;
+  padding: 50px 0 50px 0;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 48px;
+
+  padding: 8px 0;
+  border-bottom: 5px solid #19381f;
+}
+
+main .content {
+  width: 80%;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Montserrat";
+}
+
+main .col-wide {
+  grid-column: 1 / -1;
+}
+
+main .content ul {
+  font-size: 20px;
+  line-height: 32px;
+  margin: auto 0 auto 48px;
+  text-align: justify;
+}
+
+.col-wide a {
+  color: #19381f;
+  text-decoration: underline;
+}
+
+main .main-img-wrapper {
+  width: 100%;
+  margin: 24px 0;
+  display: flex;
+  justify-content: center;
+}
+
+main .sub-img-wrapper {
+  width: 100%;
+  margin: 24px 0;
+  display: flex;
+  justify-content: center;
+  grid-column: 1;
+}
+
+main .sub-img-wrapper img {
+  /* width: 40%; */
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+main .main-img-wrapper img {
+  /* width: 40%; */
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+main .content h2 {
+  grid-column: 1;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 8px 0;
+  border-bottom: 5px solid #19381f;
+}
+
+main .content p {
+  font-size: 20px;
+  line-height: 32px;
+  margin: 8px auto;
+  text-align: justify;
+}
+
+.button-to-content {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 16px 10px 16px;
+  color: #ecebf3;
+  background-color: #0f2213;
+  border-radius: 50px;
+  margin: 10px 16px 10px 16px;
+  box-sizing: content-box;
+
+  transition: 0.3s;
+  transform: translateY(0);
+}
+
+.button-to-content:hover {
+  color: #0f2213;
+  background-color: #ecebf3;
+  border: #0f2213 1px solid;
+
+  transform: translateY(-8px);
+}
+
+.bg-image-fade {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #ecebf3), url(./assets/index/zoologico-goiania.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =============================== */
+
+@media only screen and (max-width: 1000px) {
+  nav ul {
+    justify-content: flex-start;
+  }
+
+  main {
+    width: 100%;
+    margin: auto 8px;
+    background-color: #ecebf3;
+    padding: 10px 0px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main h1 {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 400;
+    font-size: 38px;
+
+    padding: 8px 0;
+    border-bottom: 5px solid #19381f;
+  }
+
+  main .main-img-wrapper {
+    width: 100%;
+    margin: 24px auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  main .sub-img-wrapper {
+    width: 100%;
+    margin: 24px auto;
+    display: flex;
+    justify-content: center;
+    grid-column: 1/-1;
+  }
+
+  main .sub-img-wrapper img {
+    /* width: 150%; */
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  main .main-img-wrapper img {
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  main .content ul {
+    grid-column: 1/-1;
+    font-size: 20px;
+    line-height: 32px;
+    margin: auto 0 auto 16px;
+    text-align: justify;
+  }
+
+  main .content p {
+    font-size: 16px;
+    line-height: 32px;
+    margin: 8px auto;
+    text-align: justify;
+  }
+
+  .button-to-content {
+    font-size: 16px;
+  }
+
+  main .content h2 {
+    grid-column: 1/-1;
+    font-size: 26px;
+    font-weight: 400;
+    padding: 8px 0;
+    border-bottom: 5px solid #19381f;
+  }
+}
