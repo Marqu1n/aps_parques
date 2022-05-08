@@ -252,7 +252,6 @@ main .content p {
   background-color: #0f2213;
   border-radius: 50px;
   margin: 10px 16px 10px 16px;
-  box-sizing: content-box;
 
   transition: 0.3s;
   transform: translateY(0);
@@ -261,7 +260,7 @@ main .content p {
 .button-to-content:hover {
   color: #0f2213;
   background-color: #ecebf3;
-  border: #0f2213 1px solid;
+  box-shadow: black 0px 8px 24px 0px;
 
   transform: translateY(-8px);
 }
