@@ -6,7 +6,7 @@
 
 
 ## In adition to the website, we had to make a application using the MIT app inventor with the same theme.
-## The aplication is the APS.apk and is, basically, a event booker. We tried to add a notification sistem, but due the plataform limitations, we could only made it work on older versions of the Android sistem.
+## The aplication is the APS.apk and is, basically, a event booker. We tried to add a notification system, but due the plataform limitations, we could only made it work on older versions of the Android system.
 ## The person who made the application was Rodrigo (github.com/Rodrigaumm).
 
 ## The website is hosted at firebase, it is only in Brazilian Portuguese.
